@@ -1,0 +1,145 @@
+html { 
+    background: url(img.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+table {
+    font-family: 'Courier New';
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ffffff;
+    text-align : center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    width:75%;
+    color: white;
+    padding: 10px;
+}
+
+input[type=reset] {
+    background-color: red;
+    width:75%;
+    color: white;
+    padding: 10px;
+}
+
+#message {
+    display: none;
+    color: #000;
+    position: relative;
+    font-size: small;
+}
+
+.must:before {
+    position: relative;
+    content: "*";
+    color: red;
+}
+
+.center { 
+    height: 100%;
+    position: relative; 
+}
+  
+.center p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sa { grid-area: sa; }
+.b1 { grid-area: b1; }
+.b2 { grid-area: b2; }
+.b3 { grid-area: b3; }
+.b4 { grid-area: b4; }
+.fn { grid-area: fn; }
+.n1 { grid-area: n1; }
+.un { grid-area: un; }
+.n2 { grid-area: n2; }
+.pw { grid-area: pw; }
+.n3 { grid-area: n3; }
+.em { grid-area: em; }
+.n4 { grid-area: n4; }
+.db { grid-area: db; }
+.n5 { grid-area: n5; }
+.ph { grid-area: ph; }
+.n6 { grid-area: n6; }
+.fs { grid-area: fs; }
+.b5 { grid-area: b5; }
+.b6 { grid-area: b6; }
+.b7 { grid-area: b7; }
+.b8 { grid-area: b8; }
+.ae { grid-area: ae; }
+.n7 { grid-area: n7; }
+.b9 { grid-area: b9; }
+.b0 { grid-area: b0; }
+.hd { grid-area: hd; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'hd hd hd'
+    'sa b1 b2'
+    'sa b3 b4'
+    'fn n1 n1'
+    'un n2 n2'
+    'pw n3 n3'
+    'em n4 n4'
+    'db n5 n5'
+    'ph n6 n6'
+    'fs b5 b6'
+    'fs b7 b8'
+    'ae n7 n7'
+    '. b9 b0';
+    grid-gap: 5px;
+}
+
+.grid-container > div {
+    background-color: rgb(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.pad {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 52%;
+    color: black;
+    background-color : rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-family: 'Courier New';
+    font-weight: bold;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}

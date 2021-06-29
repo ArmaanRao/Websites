@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Country Autocomplete</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script>
+      function sendInfo(name) {
+        var xhttp;
+        var url="CountryServlet?country="+name;
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var res=xhttp.responseXML;
+            var countries = res.getElementsByTagName('Country');
+            var len = countries.length;
+            var i;
+            var node = document.getElementById("countryname");
+            node.innerHTML = "";
+            for(i=0;i<len;i++){
+              var name = countries[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue;
+              var country = document.createElement("option");
+              country.value = name;
+              country.innerHTML = name;
+              node.appendChild(country);
+            }
+          }
+        };
+        xhttp.open("GET",url,true);
+        xhttp.send();
+      }
+    </script>
+    <style media="screen">
+      body{
+        text-align: center;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fff;
+        background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp3172897.jpg&f=1&nofb=1');
+      }
+      h1{
+        font-size: 3em;
+        font-family: 'Pacifico', cursive;
+        text-shadow: 3px 3px 5px #23689b;
+      }
+      input{
+        width: 20em;
+        margin-top: 2%;
+        height: 2em;
+        border-radius: 10px;
+        box-shadow: 4px 4px 5px #23689b;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>Autocomplete Using Ajax</h1>
+      <!-- <label for="country">Country</label>
+      <input type="text" name="country" id="country" onkeypress="sendInfo(this.value)">
+      <select id="countryname">
+      </select> -->
+      <input type="text" name="country" list="countryname" id="country" onkeypress="sendInfo(this.value)">
+      <datalist id="countryname">
+      </datalist>
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<web-app>
+<welcome-file-list>
+   <welcome-file>index.html</welcome-file>
+</welcome-file-list>
+<servlet>
+	<servlet-name>CountryServlet</servlet-name>
+	<servlet-class>CountryServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>CountryServlet</servlet-name>
+	<url-pattern>/CountryServlet</url-pattern>
+</servlet-mapping>
+</web-app>

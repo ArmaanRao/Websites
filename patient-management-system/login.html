@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="input-box">
+		<h1> ADMIN LOGIN </h1>
+		<input type="text" id="uname" name="uname" placeholder="Username" autofocus><br><br>
+		<input type="password" id="pwd" name="pwd" placeholder="Password"><br><br>
+		<button onclick="authenticate()">LOGIN</button>
+	</div>
+
+
+	<script>
+		function authenticate()
+		{
+			const uname = document.getElementById("uname").value;
+			const pwd = document.getElementById("pwd").value;
+			if(uname==="admin" && pwd==="12345")
+				window.location.href = "/pms/homepage.html";
+			else{
+				window.alert("Login Failed, enter the correct details");
+				document.getElementById("uname").value = "";
+				document.getElementById("pwd").value = "";
+				document.getElementById("uname").focus();
+			}
+		}
+	</script>
+
+</body>
+</html>

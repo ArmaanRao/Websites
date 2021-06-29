@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href = "style.css" />
+    <title> Form Validation </title>
+</head>
+<body style = "font-family: 'Courier New';" >
+    <h1 style = "text-align : center;"> You have been invited to fill out the following form! </h1>
+    <p style = "text-align: center; font-weight: bold;"> Note : <span style="color: #ff0000">*</span> indicates compulsary</p>
+    <div class = "pad">
+        <form name = "myForm" onsubmit = "return validateForm()" action="http://localhost:8080/first/FormServlet" id = "regform">
+            <div class = "grid-container">
+                <div class = "hd">
+                    <div id = "message">
+                        <p id = "hint" class = "invalid"></p>
+                    </div>
+                </div>
+                <div class = "sa" id = "SA">
+                    <div class = "center">
+                        <p> <label for = "sal"> <span style="color: #ff0000">*</span>Salutation: </label> </p>
+                    </div>
+                </div>
+                <div class = "b1">
+                    <div class = "center">
+                        <p> <input type = "radio" id = "Mr." name = "sal" value = "Mr.">
+                            <label for = "Mr."> Mr. </label> </p>
+                    </div>
+                </div>
+                <div class = "b2">
+                    <div class = "center">
+                        <p> <input type = "radio" id = "Miss." name = "sal" value = "Miss.">
+                            <label for = "Miss."> Miss. </label> </p>
+                    </div>
+                </div>
+                <div class = "b3">
+                    <div class = "center">
+                        <p> <input type = "radio" id = "Mrs." name = "sal" value = "Mrs.">
+                            <label for = "Mrs."> Mrs. </label> </p>
+                    </div>
+                </div>
+                <div class = "b4">
+                    <div class = "center">
+                        <p> <input type = "radio" id = "Dr." name = "sal" value = "Dr.">
+                            <label for = "Dr."> Dr. </label> </p>
+                    </div>
+                </div>
+
+                <div class = "fn" id = "FN">
+                    <label for = "fname"> <span style="color: #ff0000">*</span>Name: </label>
+                </div>
+                <div class = "n1">
+                    <input type = "text" id = "fname" name = "fname">
+                </div>
+
+                <div class = "un" id = "UN">
+                    <label for = "uname"> <span style="color: #ff0000">*</span>Username: </label>
+                </div>
+                <div class = "n2">
+                    <input list = "unames" id = "uname" name = "uname">
+                    <datalist id = "unames">
+                        <option value = "armaan">
+                        <option value = "armaan1">
+                        <option value = "armaan2">
+                        <option value = "armaan3">
+                    </datalist> 
+                </div>
+
+                <div class = "pw" id = "PW">
+                    <label for = "pwd"> <span style="color: #ff0000">*</span>Password: </label>
+                </div>
+                <div class = "n3">
+                    <input type = "password" id = "pwd" name = "pwd" minlength = "8">
+                </div>
+
+                <div class = "em" id = "EM">
+                    <label for = "email"> <span style="color: #ff0000">*</span>Email: </label>
+                </div>
+                <div class = "n4">
+                    <input type = "email" id = "email" name = "email"> <br>
+                </div>
+
+                <div class = "db" id = "DB">
+                    <label for = "dob"> <span style="color: #ff0000">*</span>Date of Birth: </label>
+                </div>
+                <div class = "n5">
+                    <input type = "date" id = "dob" name = "dob"> <br>
+                </div>
+
+                <div class = "ph" id = PH>
+                    <label for = "pic"> Photo: </label>
+                </div>
+                <div class = "n6">
+                    <input type = "file" id = "pic" name = "pic" accept="image/*"> <br>
+                </div>
+
+                <div class = "fs" id = "FS">
+                    <div class = "center">
+                        <p> <label for = "lang"> <span style="color: #ff0000">*</span>Fieldset: </label> </p>
+                    </div>
+                </div>
+                <div class = "b5">
+                    <div class = "center">
+                        <p> <input type = "checkbox" id = "lang1" name = "lang" value = "English">
+                            <label for = "lang1"> English </label> </p>
+                    </div>
+                </div>
+                <div class = "b6">
+                    <div class = "center">
+                        <p> <input type = "checkbox" id = "lang2" name = "lang" value = "Tamil">
+                            <label for = "lang2"> Tamil </label> </p>
+                    </div>
+                </div>
+                <div class = "b7">
+                    <div class = "center">
+                        <p> <input type = "checkbox" id = "lang3" name = "lang" value = "French">
+                            <label for = "lang3"> French </label> </p>
+                    </div>
+                </div>
+                <div class = "b8">
+                    <div class = "center">
+                        <p> <input type = "checkbox" id = "lang4" name = "lang" value = "Others">
+                            <label for = "lang4"> Others </label> </p>
+                    </div>
+                </div>
+                
+                <div class = "ae" id = "AE">
+                    <div class = "center">
+                        <p> <label for = "addexp"> Additional Expertise: </label> </p>
+                    </div>
+                </div>
+                <div class = "n7">
+                    <textarea id = "addexp" name = "addexp" rows = "4" cols = "50"> </textarea>
+                </div>
+
+                <div class = "b9" style = "background-color: rgb(255, 255, 255, 0.0)">
+                    <input type = "reset" value = "Reset">
+                </div>
+                <div class = "b0" style = "background-color: rgb(255, 255, 255, 0.0)">
+                    <input type = "submit" value = "Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <br><br>
+    <script src = "./script.js"> </script>
+
+</body>
+</html>

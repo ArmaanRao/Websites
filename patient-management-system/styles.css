@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Work+Sans:wght@200&display=swap');
+
+body{
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: top;
+   background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.wallpapertip.com%2Fwmimgs%2F11-119918_background-for-hospital-website.png&f=1&nofb=1);
+   width: 100%;
+   height: 100%;
+}
+
+h1{
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.input-box{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+    margin-top: 10%;
+    width: 250px;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.73);
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    color: #fff;
+}
+
+.view-box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 40%;
+    height: 75%;
+    background: rgba(0, 0, 0, 0.73);
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.05);
+    color: #fff;
+}
+
+.view-box table{
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+
+ .view-box table th{
+      text-decoration: underline;
+ }
+
+ .view-box table th, td{
+      height: 3em;
+ }
+
+button{
+  height: 3em;
+  width: 11.2em;
+  margin-top: 3em;
+  border-radius: 5%;
+  background-image: linear-gradient(to right, #1687a7, #28527a);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+td button{
+  width: 10em;
+  height: 3em;
+  background: rgba(0, 0, 0, 0.73);
+  border-radius: 2px;
+  padding: 5px 15px;
+  border: 0;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+
+input{
+  width: 120px;
+  height: 18px;
+  opacity: 0.4;
+  border-radius: 2px;
+  padding: 5px 15px;
+  border: 0;
+}
+
+select{
+  width: 150px;
+  height: 28px;
+  opacity: 0.4;
+  border-radius: 2px;
+  padding: 5px 15px;
+  border: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+td button:hover{
+  cursor: pointer;
+}
+
+table{
+  margin: auto;
+  color: #fff;
+}
+
+.btn{
+  height: 2em;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.btn:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
